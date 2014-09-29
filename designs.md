@@ -64,10 +64,10 @@ System overview
 - Database
     - Person
         - Basket
-            - Item
+            - Type
                 - num
                 - price
-                - Item # ?
+                - Item
                     - Fruit, x, ...
             - total() (worked out on-the-fly)
         - Basket history[]
@@ -76,3 +76,20 @@ System overview
                     - ...
                 + date
         - dateRegistered
+
+
+API
+---
+
+### Database
+
+Stores Persons.
+
+
+### Person
+
+Has a current Basket and history of Basket[].
+
+
+### Basket
+### Item
