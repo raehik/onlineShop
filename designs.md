@@ -98,7 +98,7 @@ Only deals with hashed passwords.
 Has a current Basket and history of Basket[].
 
     getBasket()
-    getHistoryOf(
+    getHistoryOf()
 
 
 ### Basket
