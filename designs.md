@@ -92,4 +92,18 @@ Has a current Basket and history of Basket[].
 
 
 ### Basket
+
+Stores a finished basket of Types of Items.
+The only thing which should be able to be changed is the number of items (this
+includes removing items, i.e. setting num to 0).
+
+
+### Type
+
+Stores information about one 'type' of Item in the store: number left, price
+per Item.
+
+
 ### Item
+
+Stores information about a single thing in the store.
