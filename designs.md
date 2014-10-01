@@ -75,6 +75,8 @@ System overview
                 - Item
                     - ...
                 + date
+            - Basket
+            - ...
         - dateRegistered
 
 
@@ -87,11 +89,15 @@ Stores Clients.
 Only deals with hashed passwords.
 
     addClient(String username, String password)
+    removeClient(String username)
 
 
 ### Client
 
 Has a current Basket and history of Basket[].
+
+    getBasket()
+    getHistoryOf(
 
 
 ### Basket
