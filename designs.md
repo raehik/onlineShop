@@ -69,7 +69,8 @@ System overview
                 - price
                 - Item
                     - Fruit, x, ...
-            - total() (worked out on-the-fly)
+            - cost
+            - updateCost() (run whenever basket is changed)
         - Basket history[]
             - Basket
                 - Item
