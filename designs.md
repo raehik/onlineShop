@@ -62,7 +62,7 @@ System overview
 ---------------
 
 - Database
-    - Person
+    - Client
         - Basket
             - Type
                 - num
@@ -83,10 +83,13 @@ API
 
 ### Database
 
-Stores Persons.
+Stores Clients.
+Only deals with hashed passwords.
+
+    addClient(String username, String password)
 
 
-### Person
+### Client
 
 Has a current Basket and history of Basket[].
 
