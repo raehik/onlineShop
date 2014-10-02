@@ -94,13 +94,13 @@ Only deals with hashed passwords.
 
 ### Client
 
-Has a current Basket and history of Basket[].
+Has a current Basket and history of all previous Baskets history[].
 
     getCost
 
-    getBasket()
-
 Returns the current Basket's cost.
+
+
     Basket[] getHistory()
 
 Returns all Baskets in history[].
