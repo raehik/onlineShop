@@ -68,14 +68,13 @@ System overview
                 - num
                 - price
                 - Item
-                    - Fruit, x, ...
+                    - name
+                    - desc
             - cost
             - updateCost() (run whenever basket is changed)
         - Basket history[]
             - Basket
-                - Item
-                    - ...
-                + date
+                - ...
             - Basket
             - ...
         - dateRegistered
@@ -97,15 +96,23 @@ Only deals with hashed passwords.
 
 Has a current Basket and history of Basket[].
 
+    getCost
+
     getBasket()
-    getHistoryOf(
+
+Returns the current Basket's cost.
+    Basket[] getHistory()
+
+Returns all Baskets in history[].
 
 
 ### Basket
 
-Stores a finished basket of Types of Items.
+Stores a (finished) basket of Types of Items.
 The only thing which should be able to be changed is the number of items (this
 includes removing items, i.e. setting num to 0).
+
+    void setNum(int newNum)
 
 
 ### Type
@@ -117,3 +124,9 @@ per Item.
 ### Item
 
 Stores information about a single thing in the store.
+
+    Item(String name, String description)
+
+    name()
+
+    description()
