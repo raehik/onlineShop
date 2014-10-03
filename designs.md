@@ -64,6 +64,7 @@ System overview
 - Database
     - Client
         - Basket
+            - (date?)
             - Type
                 - num
                 - price
@@ -74,7 +75,9 @@ System overview
             - updateCost() (run whenever basket is changed)
         - Basket history[]
             - Basket
-                - ...
+                - date
+                - Type
+                    - ...
             - Basket
             - ...
         - dateRegistered
@@ -86,33 +89,50 @@ API
 ### Database
 
 Stores Clients.
-Only deals with hashed passwords.
+Only deals in hashed (& salted) passwords!
 
-    addClient(String username, String password)
-    removeClient(String username)
+
+    addClient(String username, String password, String email, int cardNo)
+
+ayy lmao
+
+
+    removeClient(String username, String password)
+
+Removes Client with username username. Requires Client's password.
 
 
 ### Client
 
 Has a current Basket and history of all previous Baskets history[].
 
-    getCost
 
-Returns the current Basket's cost.
+    int cost
+
+The current Basket's cost in pence.
 
 
-    Basket[] getHistory()
+    array[???] getBasket()
 
-Returns all Baskets in history[].
+Returns all the current Basket's items name, description, price per item &
+quantity.
+
+
+    array[???] getHistory()
+
+Returns all previous Baskets' date and individual items in the form of name,
+description, price per item & quantity.
 
 
 ### Basket
 
-Stores a (finished) basket of Types of Items.
+Stores a (finished) basket of Types.
 The only thing which should be able to be changed is the number of items (this
 includes removing items, i.e. setting num to 0).
 
-    void setNum(int newNum)
+    void setNum(String type, int newNum)
+
+Sets a new number of the Type. If 0, calls removeType
 
 
 ### Type
@@ -120,13 +140,33 @@ includes removing items, i.e. setting num to 0).
 Stores information about one 'type' of Item in the store: number left, price
 per Item.
 
+    String name
+
+The name given to all Items of the Type.
+
+
+    int price
+
+The price of one Item of the Type.
+
+
+    int quantity
+
+The number of Items of the Type available for sale.
+
 
 ### Item
 
-Stores information about a single thing in the store.
+Stores information about a single general thing in the store.
 
     Item(String name, String description)
 
-    name()
 
-    description()
+    String name
+
+Item name (e.g. 'Braeburn apple')
+
+
+    String description
+
+General item description.
